@@ -1,0 +1,53 @@
+1. Greedy Algorithm:
+
+Number of cities: 11
+
+Tour:
+
+1 2 6 4 5 7 8 10 3 11 9 
+
+Wollongong-> Sydney-> Canberra-> Melbourne-> Adelaide-> Alice Springs-> Darwin-> Cairns-> Brisbane-> Gold Coas-> Perth-> Wollongong-> 
+
+Total Cost is: 17637
+
+2. Branch and bound algorithm (Best first using a priority queue and breadth-first node expansion:
+
+Number of cities 11
+
+upper bound is:  17637
+lower bound is:  9338
+
+Optimal tour:
+
+1 2 11 3 10 8 7 9 5 4 6 
+
+Wollongong -> Sydney -> Gold Coas -> Brisbane -> Cairns -> Darwin -> Alice Springs -> Perth -> Adelaide -> Melbourne -> Canberra -> Wollongong -> 
+
+Total cost:  14988
+1. Greedy Algorithm:
+
+Number of cities: 11
+
+Tour:
+
+1 2 6 4 5 7 8 10 3 11 9 
+
+Wollongong-> Sydney-> Canberra-> Melbourne-> Adelaide-> Alice Springs-> Darwin-> Cairns-> Brisbane-> Gold Coas-> Perth-> Wollongong-> 
+
+Total Cost is: 17637
+
+2. Branch and bound algorithm (Best first using a priority queue and breadth-first node expansion:
+
+Number of cities 11
+
+upper bound is:  17637
+lower bound is:  9338
+
+Optimal tour:
+
+1 2 11 3 10 8 7 9 5 4 6 
+
+Wollongong -> Sydney -> Gold Coas -> Brisbane -> Cairns -> Darwin -> Alice Springs -> Perth -> Adelaide -> Melbourne -> Canberra -> Wollongong -> 
+
+Total cost:  14988
+total nodes generated 30128

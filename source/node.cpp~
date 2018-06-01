@@ -1,0 +1,36 @@
+
+#include <functional>
+#include <queue>
+#include <vector>
+#include <iostream>
+#include"node.h"
+
+using namespace std;
+
+node::node(){
+
+lowerBound=0;
+upperBound=0;
+node1=0;
+
+}
+
+		
+		
+double node::getLower(){
+return lowerBound;
+
+}
+
+
+void node::setLower(double l){
+lowerBound = l;
+}
+
+double node::getUpper(){
+return upperBound;
+}
+
+void node::setUpper(double u){
+upperBound = u;
+}

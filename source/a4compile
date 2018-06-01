@@ -1,0 +1,3 @@
+#!/bin/bash
+
+g++ Matrix.cpp node.cpp setQ.cpp TSDriver.cpp -o ass4

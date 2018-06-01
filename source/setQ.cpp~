@@ -1,0 +1,160 @@
+
+/*
+Author: Tessa Marelic, Student ID 4954130, CSCI203, ass3
+This is the source file for setQ.h
+it holds all methods for the creation and 
+manipultion of a queue
+*/
+
+
+
+#include<iostream>
+#include<fstream>
+
+#include"setQ.h"
+
+using namespace std;
+
+setQ::setQ(){
+
+	start = 0;
+	next = 0;
+	counter =0;
+	queue = NULL;
+	QSIZE = 0;
+	
+	startTree = 0;
+	nextTree = 0;
+	bbq=NULL;
+	possCounter=0;
+	POSSTREESIZE=0;
+}
+
+
+
+void setQ::allocateMemory(int count){
+	queue = new Qmembers[count];
+	QSIZE = count;
+
+	if(queue == NULL)
+		cout << "error allocating memory!" << endl;
+}
+
+
+void setQ::allocateMemoryPossTrees(int count){
+	bbq = new PossTrees[count];
+	POSSTREESIZE = count;
+
+	if(bbq == NULL)
+		cout << "error allocating memory!" << endl;
+}
+
+setQ::~setQ(){
+	
+	if(queue != NULL)
+		delete [] queue;
+
+	if(bbq != NULL)
+		delete [] bbq;
+}
+
+void setQ::enqueueNV(PossTrees p){
+	
+	bbq[nextTree] = p;
+	nextTree = (nextTree +1) % POSSTREESIZE;
+		possCounter++;
+	
+	if(possCounter >= POSSTREESIZE){
+		//next = 0;
+		cout << "poss tree queue has reached capacity of " << POSSTREESIZE << endl;
+	}
+	
+}
+
+PossTrees setQ::dequeueNV(){
+	
+	possCounter--;
+		
+	
+	PossTrees e= bbq[startTree];
+	startTree = (startTree+1)%POSSTREESIZE;
+		
+		
+
+return e;
+		
+}
+	
+
+void setQ::enqueue(Qmembers e){
+
+	queue[next] = e;
+	next = (next +1) % QSIZE;
+		counter++;
+	
+	if(counter >= QSIZE){
+		//next = 0;
+		//cout << "queue has reached capacity of " << QSIZE << endl;
+	}
+	
+	
+}
+	
+Qmembers setQ::dequeue(){
+	
+	counter--;
+		
+	
+	Qmembers e= queue[start];
+	start = (start+1)%QSIZE;
+		
+		
+
+return e;
+		
+}
+
+Qmembers setQ::front(){
+	Qmembers e =queue[start];
+	return e;
+}
+
+
+bool setQ::isEmpty(){
+	
+	if(counter==0)
+		return true;
+
+	else
+	return false;
+}
+
+int setQ::getCounter(){
+	return counter;
+}
+int colIndex;
+	int rowIndex;
+void setQ::display(){
+	
+	for(int i = 0; i< QSIZE; i++){
+		cout << queue[i].colIndex << ',' << queue[i].rowIndex; 
+	}	
+
+}
+
+
+int setQ::getQSIZE(){
+	return QSIZE;
+}
+
+void setQ::setQSIZE(int qsize){
+ this->QSIZE = qsize;
+	
+}
+
+int setQ::getPosCounter(){
+	return possCounter;
+}
+
+
+
