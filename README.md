@@ -41,7 +41,7 @@ The STL priority queue is used as a pruning mechanism because it is ordered by l
 
 Output:
 
-Branch and bound finds an optimal tour. The implementation created 30128 nodes for road tour and only 13,289 for flights. If the heap and comparisons with upper bound were not implemented all combinations would be produced, which is approx. 〖2.92x10〗^10
+Branch and bound finds an optimal tour. The implementation created 30128 nodes for road tour and only 13,289 for flights. If the heap and comparisons with upper bound were not implemented all combinations would be produced, which in this case would be 11!
  
 Conclusion:
 
